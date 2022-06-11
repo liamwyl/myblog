@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>我的博客</title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+			integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+			rel="stylesheet">
+
+		<!-- Template CSS -->
+		<link rel="stylesheet" href="assets/css/style-starter.css">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<style>
+			.navbar-brand {
+				/* 座右铭变化 */
+				margin: 20px 5px;
+				transition: 2s;
+				/*  变化的时间*/
+				/* float: left; */
+			}
+
+			.navbar-brand:hover {
+				transform: scale(1.3);
+				transform-origin: 0 0;
+			}
+
+			.carousel-inner .item .pgwh1 {
+				width: 500px;
+				height: 350px;
+			}
+
+			.carousel-inner .item .pgwh2 {
+				width: 500px;
+				height: 650px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--header-->
+		<header id="site-header" class="fixed-top">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-light stroke">
+					<a class="navbar-brand" href="./portfolio/Vue.html">
+						<span>Learn more, do more</span>
+					</a>
+					<!-- if logo is image enable this   
+        <a class="navbar-brand" href="#index.html">
+            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+        </a> -->
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+						data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="fa icon-expand fa-bars"></span>
+						<span class="fa icon-close fa-times"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="index.html">Home </a>
+							</li>
+							<li class="nav-item @@portfolio__active">
+								<a class="nav-link" href="portfolio.html">My Portfolio</a>
+							</li>
+
+							<li class="nav-item @@c__active">
+								<a class="nav-link" href="contact.html">Contact me</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+						<div class="popup ml-auto">
+							<a href="#menu" class="domain" data-toggle="modal" data-target="#DomainModal">
+								<div class="hamburger">
+									<span class="top-bar"></span>
+									<span class="middle-bar"></span>
+									<span class="bottom-bar"></span>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<!-- toggle switch for light and dark theme -->
+					<div class="mobile-position ml-lg-2">
+						<nav class="navigation">
+							<div class="theme-switch-wrapper">
+								<label class="theme-switch" for="checkbox">
+									<input type="checkbox" id="checkbox">
+									<div class="mode-container">
+										<i class="gg-sun"></i>
+										<i class="gg-moon"></i>
+									</div>
+								</label>
+							</div>
+						</nav>
+					</div>
+					<!-- //toggle switch for light and dark theme -->
+				</nav>
+			</div>
+		</header>
+		<!--/header-->
+		<div class="header-gap">
+
+		</div>
+
+
+		<!-- Domain Modal -->
+		<div class="modal right fade" id="DomainModal" tabindex="-1" role="dialog" aria-labelledby="DomainModalLabel2">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">&times;</span></button>
+
+					<div class="modal-body">
+						<div class="modal__content">
+							<a class="navbar-brand"> <span>Learn more, do more </span></a>
+							<!-- if logo is image enable this   
+            <h2 class="logo">
+              <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+            </h2> -->
+							<p class="mt-md-3 mt-2">I Would Love to make your Ideas real. Contact me and we will discuss
+								your projects!
+							</p>
+
+							<img src="assets/images/banner.png" alt="" class="img-fluid mt-5">
+
+							<div class="widget-social-icons mt-sm-5 mt-4">
+								<ul class="icon-rounded address">
+									<li class="mt-3">
+										<p><a href="tel:+404-11-22-89">tel:+1304256xxxx</a></p>
+
+									</li>
+									<li class="mt-2">
+										<p><a href="mailto:design@portfolio.com">email:liamwei922@163.com</a></p>
+									</li>
+								</ul>
+							</div>
+							<div class="widget-social-icons mt-sm-5 mt-4">
+								<ul class="follow-social">
+									<li><a href="#url"><span class="fa fa-envelope-o"></span></a></li>
+									<li><a href="#url"><span class="fa fa-phone"></span></a></li>
+									<li><a href="#url"><span class="fa fa-facebook-official"></span></a></li>
+									<li><a href="#url"><span class="fa fa-twitter"></span></a></li>
+								</ul>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<!-- //modal-content -->
+			</div>
+			<!-- //modal-dialog -->
+		</div>
+		<!-- //Domain modal -->
+		<!-- banner section -->
+		<section id="home" class="w3l-banner pb-5">
+			<div class="container pb-md-3">
+				<div class="banner-wrapper text-center">
+					<div class="">
+						<span class="text">About Me</span>
+						<h1 class="mb-4 title">Hello, <span class="type-js"><span class="text-js">I’m Wei Yulai</span></span><br>I expect to be a front-end engineer</h1>
+						<p class="mx-lg-5">I love <strong>Vue</strong> and <strong>JS</strong> and have been working on
+							my portfolio since 2021.
+							I Can give your business a new Creative start right away!
+						</p>
+					</div>
+					<div class="row">
+						<div class="col-lg-8 mx-lg-auto col-md-10">
+							<img src="assets/images/banner.png" alt="" class="img-fluid mt-lg-5 mt-3">
+						</div>
+					</div>
+					<ul class="follow-social">
+						<li>
+							<p>Follow me </p>
+						</li>
+						<li><a href="#url"><span class="fa fa-envelope-o"></span></a></li>
+						<li><a href="#url"><span class="fa fa-phone"></span></a></li>
+						<li><a href="#url"><span class="fa fa-linkedin"></span></a></li>
+						<li><a href="#url"><span class="fa fa-facebook-official"></span></a></li>
+						<li><a href="#url"><span class="fa fa-twitter"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- //banner section -->
+		<!-- home page about section -->
+		<section class="w3l-homeblock1" id="about">
+			<div class="midd-w3 py-5">
+				<div class="container py-lg-5 py-md-3">
+					<div class="row">
+						<div class="col-lg-6">
+							<span class="text">My Services</span>
+							<h3 class="title-big"><span>Build your brand</span> and grow your business</h3>
+							<p class="mt-4">I can bring new ideas to your business immediately! You can read my resume and know what I am good at</p>
+							<ul class="service-list mt-md-5 mt-4">
+								<li class="service-link"><a href="./portfolio/Vue.html" target="_blank">Vue</a></li>
+								<li class="service-link"><a href="./portfolio/JavaScript高级.html"
+										target="_blank">JavaScript</a></li>
+								<li class="service-link"><a href="./portfolio/NodeJS.html" target="_blank">NodeJS</a>
+								</li>
+								<li class="service-link"><a href="./portfolio/jQuery.html" target="_blank">jQuery</a>
+								</li>
+								<li class="service-link"><a href="./portfolio/Vue.html" target="_blank">ECMAScript</a>
+								</li>
+								<li class="service-link"><a href="./portfolio/AJAX.html" target="_blank">Ajax</a></li>
+								<li class="service-link"><a href="./portfolio/Vue.html" target="_blank">HTML&&CSS</a>
+								</li>
+							</ul>
+							<a href="./portfolio.html" class="btn btn-style btn-empty p-0">View my all portfolios
+								<span></span></a>
+						</div>
+						<div class="col-lg-6 mt-lg-0 mt-5">
+							<div class="position-relative">
+								<img src="assets/images/self.jpg" alt="" class="radius-image img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //home page about section -->
+
+		<!-- home page about section -->
+		<section class="w3l-homeblock2" id="skills">
+			<div class="midd-w3 py-5">
+				<div class="container py-lg-5 py-md-3">
+					<div class="row">
+						<div class="col-lg-6 align-self">
+							<div class="position-relative px-lg-5 mx-lg-0 mx-md-5 image-padding">
+								<img src="assets/images/skills.png" alt="" class="radius-image img-fluid">
+								<div class="position-absolute-images">
+									<img src="assets/images/file.png" class="img-fluid pos-img" alt="" />
+									<img src="assets/images/file1.png" class="img-fluid pos-img1" alt="" />
+									<img src="assets/images/file2.png" class="img-fluid pos-img2" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 mt-lg-0 mt-md-5 mt-4">
+							<span class="text">My Featured Skills</span>
+							<h3 class="title-big">I’m using <span>top leading</span>
+								Web development methods.</h3>
+							<p class="mt-4">I follow the cutting-edge computing of Web development in real time and learn and work with it</p>
+							<div class="skills-bars mt-5">
+								<div class="progress-info">
+									<h6 class="progress-tittle">VUE && REACT</h6>
+									<div class="progress">
+										<div class="progress-bar progress-bar-striped" role="progressbar"
+											style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+										</div>
+									</div>
+								</div>
+								<div class="progress-info">
+									<h6 class="progress-tittle">BOOTSTROP && JQUERY
+									</h6>
+									<div class="progress">
+										<div class="progress-bar progress-bar-striped" role="progressbar"
+											style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+										</div>
+									</div>
+								</div>
+								<div class="progress-info">
+									<h6 class="progress-tittle">HTML && CSS</h6>
+									<div class="progress">
+										<div class="progress-bar progress-bar-striped" role="progressbar"
+											style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+										</div>
+									</div>
+								</div>
+								<div class="progress-info mb-0">
+									<h6 class="progress-tittle">AJAX && NODEJS</h6>
+									<div class="progress">
+										<div class="progress-bar progress-bar-striped" role="progressbar"
+											style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //home page about section -->
+
+		<!-- home page about section -->
+		<section class="w3l-homeblock3" id="awards">
+			<div class="midd-w3 py-5">
+				<div class="container py-lg-5 py-md-3">
+					<div class="row">
+						<div class="col-lg-6">
+							<span class="text">My Awards and Achievements </span>
+							<h3 class="title-big">Professional awards and
+								honors <span> I’ve reached.</span></h3>
+							<p class="mt-4">Personal awards. Having 3 Years of Experience that Motivated by the Desire
+								to
+								achieve Success. 2019 - 2022</p>
+							<div class="reward-list mt-5">
+								<div class="reward-item">
+									<div class="reward-item-photo"><img src="assets/images/banner.png" alt=""
+											class="img-fluid"></div>
+									<div class="reward-item-detail">
+										<span class="reward-item-title">华为HCIA</span>
+										<p class="reward-item-descr">Unremitting efforts, hard work~</p>
+									</div>
+								</div>
+								<div class="reward-item">
+									<div class="reward-item-photo"><img src="assets/images/skills.png" alt=""
+											class="img-fluid"></div>
+									<div class="reward-item-detail">
+										<span class="reward-item-title">《电脑知识与技术》杂志论文</span>
+										<p class="reward-item-descr">Unremitting efforts, hard work~ </p>
+									</div>
+								</div>
+								<div class="reward-item">
+									<div class="reward-item-photo"><img src="assets/images/banner.png" alt=""
+											class="img-fluid"></div>
+									<div class="reward-item-detail">
+										<span class="reward-item-title">第十二届大学生服务外包创新创业大赛</span>
+										<p class="reward-item-descr">Unremitting efforts, hard work</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
+							<div class="position-relative px-lg-5 mx-lg-0 mx-md-5 image-padding">
+
+
+								<!-- 轮播图 -->
+
+								<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+									<!-- Indicators -->
+									<!-- <ol class="carousel-indicators">
+								        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+										<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+										<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+										<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+										<li data-target="#carousel-example-generic" data-slide-to="6"></li>
+										<li data-target="#carousel-example-generic" data-slide-to="7"></li>
+								      </ol> -->
+
+									<!-- Wrapper for slides -->
+									<div class="carousel-inner" role="listbox">
+										<div class="item active">
+											<img src="assets/images/award8.jpg" class="pgwh1" alt="...">
+											<div class="carousel-caption">
+
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/images/award1.jpg" class="pgwh1" alt="...">
+											<div class="carousel-caption">
+												<!-- 说明 -->
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/images/award2.jpg" class="pgwh1" alt="...">
+											<div class="carousel-caption">
+												<!-- 说明 -->
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/images/award7.jpg" class="pgwh1" alt="...">
+											<div class="carousel-caption">
+												<!-- 说明 -->
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/images/award3.jpg" class="pgwh2" alt="...">
+											<div class="carousel-caption">
+												<!-- 说明 -->
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/images/award4.jpg" class="pgwh2" alt="...">
+											<div class="carousel-caption">
+												<!-- 说明 -->
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/images/award5.jpg" class="pgwh2" alt="...">
+											<div class="carousel-caption">
+												<!-- 说明 -->
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/images/award6.jpg" class="pgwh2" alt="...">
+											<div class="carousel-caption">
+												<!-- 说明 -->
+											</div>
+										</div>
+									</div>
+
+									<!-- Controls -->
+									<a class="left carousel-control" href="#carousel-example-generic" role="button"
+										data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previous</span>
+									</a>
+									<a class="right carousel-control" href="#carousel-example-generic" role="button"
+										data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</div>
+
+								<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+								<script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"
+									integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+									crossorigin="anonymous"></script>
+								<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+								<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+									integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+									crossorigin="anonymous"></script>
+	</body>
+</html>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- //home page about section -->
+
+<!-- home page about section -->
+<section class="w3l-clients" id="skills">
+	<div class="midd-w3 py-5">
+		<div class="container py-lg-5 py-md-3">
+			<div class="row">
+				<div class="col-lg-6 align-self">
+					<div class="position-relative px-lg-5">
+						<img src="assets/images/clients.png" alt="" class="radius-image img-fluid">
+					</div>
+				</div>
+				<div class="col-lg-6 mt-lg-0 mt-5">
+					<span class="text">profile</span>
+					<h3 class="title-big"><span>Technologies related to Web development</span></h3>
+					<div id="owl-demo1" class="owl-carousel owl-theme mt-4 py-2 mb-4">
+						<div class="item">
+							<div class="testimonial-content">
+								<div class="testimonial">
+									<blockquote>
+										<q>Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。
+
+											Vue 只关注视图层， 采用自底向上增量开发的设计。
+
+											Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。
+
+											Vue 学习起来非常简单，本教程基于 Vue 2.1.8 版本测试，Vue3 请参阅 Vue3 教程。</q>
+									</blockquote>
+									<div class="testi-des">
+										<div class="test-img"><img src="assets/images/team1.jpg" class="img-fluid"
+												alt="client-img">
+										</div>
+										<div class="peopl align-self">
+											<h3>Evan You</h3>
+											<p class="indentity">Vue</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimonial-content">
+								<div class="testimonial">
+									<blockquote>
+										<q>简单的说 Node.js 就是运行在服务端的 JavaScript。
+
+											Node.js 是一个基于 Chrome JavaScript 运行时建立的一个平台。
+
+											Node.js 是一个事件驱动 I/O 服务端 JavaScript 环境，基于 Google 的 V8 引擎，V8 引擎执行 Javascript
+											的速度非常快，性能非常好。</q>
+									</blockquote>
+									<div class="testi-des">
+										<div class="test-img"><img src="assets/images/team2.jpg" class="img-fluid"
+												alt="client-img">
+										</div>
+										<div class="peopl align-self">
+											<h3>Ryan Dahl</h3>
+											<p class="indentity">NodeJS</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimonial-content">
+								<div class="testimonial">
+									<blockquote>
+										<q>Bootstrap，来自 Twitter，是目前最受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT
+											的，它简洁灵活，使得 Web 开发更加快捷。
+
+											本教程将向您讲解 Bootstrap 框架的基础，通过学习这些内容，您将可以轻松地创建 Web 项目。教程被分为 Bootstrap
+											基本结构、Bootstrap CSS、Bootstrap 布局组件和 Bootstrap
+											插件几个部分。每个部分都包含了与该主题相关的简单有用的实例。</q>
+									</blockquote>
+									<div class="testi-des">
+										<div class="test-img"><img src="assets/images/team3.jpg" class="img-fluid"
+												alt="client-img">
+										</div>
+										<div class="peopl align-self">
+											<h3>Mark Otto</h3>
+											<p class="indentity">Bootstrap</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimonial-content">
+								<div class="testimonial">
+									<blockquote>
+										<q>jQuery 是一个 JavaScript 库。
+
+											jQuery 极大地简化了 JavaScript 编程。
+
+											jQuery 很容易学习。</q>
+									</blockquote>
+									<div class="testi-des">
+										<div class="test-img"><img src="assets/images/team4.jpg" class="img-fluid"
+												alt="client-img">
+										</div>
+										<div class="peopl align-self">
+											<h3>John Resig</h3>
+											<p class="indentity">jQuery</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimonial-content">
+								<div class="testimonial">
+									<blockquote>
+										<q>AJAX = Asynchronous JavaScript and XML.
+
+											AJAX 是一种用于创建快速动态网页的技术。
+
+											AJAX 通过在后台与服务器进行少量数据交换，使网页实现异步更新。这意味着可以在不重载整个页面的情况下，对网页的某些部分进行更新。
+
+											传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个页面。
+
+											有很多使用 AJAX 的应用程序案例：Google Maps、Gmail、Youtube 和 Facebook。</q>
+									</blockquote>
+									<div class="testi-des">
+										<div class="test-img"><img src="assets/images/team5.jpg" class="img-fluid"
+												alt="client-img">
+										</div>
+										<div class="peopl align-self">
+											<h3>Jesse James Garrett</h3>
+											<p class="indentity">AJAX</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //home page about section -->
+
+<!-- home page about section -->
+<section class="w3l-homeblock3" id="clients">
+	<div class="midd-w3 py-5">
+		<div class="container py-lg-5 py-md-3">
+			<div class="row">
+				<div class="col-lg-6">
+					<span class="text">My technology</span>
+					<h3 class="title-big">Clients / Partners and
+						<span> Collaborations.</span>
+					</h3>
+					<p class="mt-4"></p>
+					<div class="reward-list mt-5">
+						<div class="reward-item">
+							<div class="reward-item-photo">10+
+							</div>
+							<div class="reward-item-detail">
+								<span class="reward-item-title">Total technicals</span>
+								<p class="reward-item-descr">In the self-study~</p>
+							</div>
+						</div>
+						<div class="reward-item">
+							<div class="reward-item-photo">95%
+							</div>
+							<div class="reward-item-detail">
+								<span class="reward-item-title">Sensitive feedback</span>
+								<p class="reward-item-descr">For results quality</p>
+							</div>
+						</div>
+						<div class="reward-item">
+							<div class="reward-item-photo">10+
+							</div>
+							<div class="reward-item-detail">
+								<span class="reward-item-title">results</span>
+								<p class="reward-item-descr">Keep developing</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 align-self text-center mt-lg-0 mt-md-5 mt-4">
+					<div class="images">
+						<img src="assets/images/web1.jpg" class="img-fluid" alt="" />
+						<img src="assets/images/web2.jpg" class="img-fluid" alt="" />
+						<img src="assets/images/web3.png" class="img-fluid" alt="" />
+						<img src="assets/images/web4.jpg" class="img-fluid" alt="" />
+						<img src="assets/images/web5.jpg" class="img-fluid" alt="" />
+						<img src="assets/images/web6.jpg" class="img-fluid" alt="" />
+						<img src="assets/images/web7.jpg" class="img-fluid" alt="" />
+						<img src="assets/images/web8.jpg" class="img-fluid" alt="" />
+						<img src="assets/images/web9.jpg" class="img-fluid" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- //home page contact section -->
+<div class="copyright py-sm-5 py-4 text-center">
+	<div class="container">
+		<p class="copy-footer-29">Copyright &copy; 2022 liamwyl.</p>
+	</div>
+</div>
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" title="Go to top">
+	<span class="fa fa-angle-up"></span>
+</button>
+<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {
+		scrollFunction()
+
+
+
+	};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			document.getElementById("movetop").style.display = "block";
+		} else {
+			document.getElementById("movetop").style.display = "none";
+		}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+</script>
+<!-- /move top -->
+
+<!-- jQuery and Bootstrap JS -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+
+<script src="assets/js/theme-change.js"></script><!-- theme switch js (light and dark)-->
+
+
+<!-- owlcarousel -->
+<script src="assets/js/owl.carousel.js"></script>
+
+
+
+<script>
+	document.getElementsByClassName('fa fa-phone')[0].onclick = function() {
+		confirm("Tel:1154826636@qq.com")
+	}
+	document.getElementsByClassName('fa fa-envelope-o')[0].onclick = function() {
+		confirm("Emial:liamwei922@163.com")
+	}
+	document.getElementsByClassName('fa fa-twitter')[0].onclick = function() {
+		confirm("Emial:liamwei922@163.com")
+	}
+	document.getElementsByClassName('fa fa-facebook-official')[0].onclick = function() {
+		confirm("Emial:liamwei922@163.com")
+	}
+
+
+
+	document.getElementsByClassName('fa fa-phone')[1].onclick = function() {
+		confirm("Tel:1154826636@qq.com")
+	}
+	document.getElementsByClassName('fa fa-envelope-o')[1].onclick = function() {
+		confirm("Emial:liamwei922@163.com")
+	}
+
+	document.getElementsByClassName('fa fa-linkedin')[0].onclick = function() {
+		confirm("Emial:liamwei922@163.com")
+	}
+	document.getElementsByClassName('fa fa-twitter')[1].onclick = function() {
+		confirm("Emial:liamwei922@163.com")
+	}
+	document.getElementsByClassName('fa fa-facebook-official')[1].onclick = function() {
+		confirm("Emial:liamwei922@163.com")
+	}
+</script>
+
+<!-- script for tesimonials carousel slider -->
+<script>
+	$(document).ready(function() {
+		$("#owl-demo1").owlCarousel({
+			loop: true,
+			nav: false,
+			responsiveClass: true,
+			responsive: {
+				0: {
+					items: 1,
+					nav: false
+				},
+				736: {
+					items: 1,
+					nav: false
+				}
+			}
+		})
+	})
+</script>
+<!-- //script for tesimonials carousel slider -->
+
+<!-- script for portfolio slider -->
+<script>
+	$(document).ready(function() {
+		$("#owl-portfolio").owlCarousel({
+			loop: true,
+			margin: 20,
+			nav: false,
+			responsiveClass: true,
+			responsive: {
+				0: {
+					items: 1,
+					nav: false
+				},
+				568: {
+					items: 2,
+					nav: false
+				},
+				1080: {
+					items: 3,
+					nav: false
+				}
+			}
+		})
+	})
+</script>
+<!-- //script for portfolio slider -->
+
+<!-- script for featured posts blog slider -->
+<script>
+	$(document).ready(function() {
+		$('.owl-testimonial').owlCarousel({
+			loop: true,
+			margin: 0,
+			nav: true,
+			responsiveClass: true,
+			autoplay: false,
+			autoplayTimeout: 5000,
+			autoplaySpeed: 1000,
+			autoplayHoverPause: false,
+			responsive: {
+				0: {
+					items: 1,
+					nav: false
+				},
+				480: {
+					items: 1,
+					nav: false
+				},
+				667: {
+					items: 1,
+					nav: false
+				},
+				1000: {
+					items: 1,
+					nav: false
+				}
+			}
+		})
+	})
+</script>
+<!-- //script for featured posts blog slider -->
+
+<!-- script for banner typing text -->
+<script>
+	function autoType(elementClass, typingSpeed) {
+		var thhis = $(elementClass);
+		thhis.css({
+			"position": "relative",
+			"display": "inline-block"
+		});
+		thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+		thhis = thhis.find(".text-js");
+		var text = thhis.text().trim().split('');
+		var amntOfChars = text.length;
+		var newString = "";
+		thhis.text("|");
+		setTimeout(function() {
+			thhis.css("opacity", 1);
+			thhis.prev().removeAttr("style");
+			thhis.text("");
+			for (var i = 0; i < amntOfChars; i++) {
+				(function(i, char) {
+					setTimeout(function() {
+						newString += char;
+						thhis.text(newString);
+					}, i * typingSpeed);
+				})(i + 1, text[i]);
+			}
+		}, 1500);
+	}
+
+	$(document).ready(function() {
+		// Now to start autoTyping just call the autoType function with the 
+		// class of outer div
+		// The second paramter is the speed between each letter is typed.   
+		autoType(".type-js", 200);
+	});
+</script>
+<!-- //script for banner typing text -->
+
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+	$(function() {
+		$('.navbar-toggler').click(function() {
+			$('body').toggleClass('noscroll');
+		})
+	});
+</script>
+<!-- disable body scroll which navbar is in active -->
+
+<!-- MENU-JS -->
+<script>
+	$(window).on("scroll", function() {
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 80) {
+			$("#site-header").addClass("nav-fixed");
+		} else {
+			$("#site-header").removeClass("nav-fixed");
+		}
+	});
+
+	//Main navigation Active Class Add Remove
+	$(".navbar-toggler").on("click", function() {
+		$("header").toggleClass("active");
+	});
+	$(document).on("ready", function() {
+		if ($(window).width() > 991) {
+			$("header").removeClass("active");
+		}
+		$(window).on("resize", function() {
+			if ($(window).width() > 991) {
+				$("header").removeClass("active");
+			}
+		});
+	});
+</script>
+<!-- //MENU-JS -->
+
+<!-- bootstrap -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
